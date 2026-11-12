@@ -1,12 +1,13 @@
 #include <Arduino.h>
-
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT); 
+  pinMode(12, OUTPUT);
+  pinMode(8, OUTPUT);
 }
-
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH); 
-  delay(500);                      
-  digitalWrite(LED_BUILTIN, LOW);  
-  delay(500);                      
+  digitalWrite(12, HIGH);
+  tone(8, 440);
+  delay(500);
+  digitalWrite(12, LOW);
+  noTone(8);
+  delay(500);
 }
